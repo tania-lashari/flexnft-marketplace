@@ -1,0 +1,14 @@
+@import './color.scss';
+@include custom-classes;
+@include colors;
+
+@import '../common/styles.scss';
+
+@import '../Components/styles.scss';
+@import '../Pages/HomePage/styles.scss';
+@import '../Pages/FaqPage/styles.scss';
+@import '../Pages/ExplorePage/styles.scss';
+@import '../Pages/CreatorsPage/styles.scss';
+@import '../Pages/AuctionPage/styles.scss';
+@import '../Pages/SoldPage/styles.scss';
+@import '../Pages/CreatePage/styles.scss';

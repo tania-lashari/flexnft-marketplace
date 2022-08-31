@@ -1,0 +1,16 @@
+.sold-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  .page__heading {
+    @include text(30px, '', 600);
+    color: $WHITE;
+    margin-bottom: 10px;
+  }
+  .page__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr)) !important;
+    grid-gap: 24px;
+    padding: 21px 0 61px;
+  }
+}

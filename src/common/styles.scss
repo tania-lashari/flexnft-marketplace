@@ -1,0 +1,551 @@
+//==========================
+//   APP BUTTON
+//==========================
+.app--button {
+  @include text(16px, '', '');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 15px;
+  color: $WHITE;
+  outline: none;
+  border: none;
+  background-color: rgb(91, 24, 154);
+  background-image: linear-gradient(
+    to right,
+    rgb(55, 226, 83),
+    rgb(4, 77, 8)
+  );
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 3px 1px -2px,
+    rgb(0, 0, 0, 0.14) 0px 2px 2px 0px, rgb(0, 0, 0, 0.12) 0px 1px 5px;
+  border-radius: 4px;
+  @media only screen and(max-width:992px) {
+    font-size: 14px;
+    height: 34px;
+    padding: 12px 15px;
+    border-radius: 6px;
+  }
+}
+
+.app__heading {
+  @include text(40px, '', 900);
+  color: $PRIMARY;
+  margin: 30px 0px;
+  text-align: center;
+}
+.app__description {
+  @include text(22px, '', 600);
+  color: $PRIMARY;
+  line-height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.border-bottom {
+  border-bottom: 2px solid $WHITE !important;
+}
+
+//==========================
+//         BUY CARD
+//==========================
+.buy-card {
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  overflow: hidden;
+  border: 2px solid rgb(129, 199, 132);
+  border-radius: 8px;
+  .card__img {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+  }
+  .card__content {
+    width: 100%;
+    height: 210px;
+    padding: 0px 16px;
+    .content__logos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -25px;
+      .logos {
+        width: 38px;
+        height: 38px;
+      }
+    }
+    .content__heading {
+      @include text(22px, '', 500);
+      margin: 10px 0;
+      color: $WHITE;
+    }
+    .content__price {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      .price__title {
+        @include text(14px, '', 500);
+        color: $DISABLE;
+      }
+      .price__number {
+        @include text(15px, '', 500);
+        color: $WHITE;
+        span {
+          @include text(12px, '', 500);
+          color: $DISABLE;
+        }
+      }
+    }
+    .content___buy {
+      outline: none;
+      border: none;
+      width: 100%;
+      background-color: $SECONDRY;
+      border-radius: 5px;
+      color: $WHITE;
+      margin-top: 15px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(38, 75, 158);
+      }
+    }
+  }
+}
+
+//========================
+//    CREATOR CARD
+//========================
+.creator-card {
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid $DISABLE;
+  .card__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .profile__pic {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+    }
+    .profile__verified {
+      width: 18px;
+      height: 18px;
+      margin-top: -12px;
+      margin-left: 27px;
+    }
+  }
+  .card__username {
+    @include text(20px, '', 600);
+    line-height: 1.6;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: $WHITE;
+    max-width: 150px;
+    margin: auto;
+  }
+}
+
+//==========================
+//         AUCTION CARD
+//==========================
+.auction-card {
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  overflow: hidden;
+  border: 2px solid rgb(129, 199, 132);
+  border-radius: 8px;
+  .card__img {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+  }
+  .card__content {
+    width: 100%;
+    height: 250px;
+    padding: 0px 16px;
+    .content__logos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -25px;
+      .logos {
+        width: 38px;
+        height: 38px;
+      }
+    }
+    .content__heading {
+      @include text(22px, '', 500);
+      margin: 10px 0;
+      color: $WHITE;
+    }
+    .content__bid {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      .bid__title {
+        @include text(14px, '', 500);
+        color: $DISABLE;
+      }
+      .bid__number {
+        @include text(15px, '', 500);
+        color: $WHITE;
+      }
+    }
+    .content___buy {
+      outline: none;
+      border: none;
+      width: 100%;
+      color: rgba(255, 255, 255, 0.3);
+      box-shadow: none;
+      background-color: rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
+      // &:hover {
+      //   background-color: rgb(38, 75, 158);
+      // }
+    }
+    .content___bbuy {
+      outline: none;
+      border: none;
+      width: 100%;
+      background-color: $SECONDRY;
+      border-radius: 5px;
+      color: $WHITE;
+      margin-top: 15px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(38, 75, 158);
+      }
+    }
+  }
+}
+
+//==========================
+//         BUY CARD
+//==========================
+.buy-card {
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  overflow: hidden;
+  border: 2px solid rgb(129, 199, 132);
+  border-radius: 8px;
+  .card__img {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+  }
+  .card__content {
+    width: 100%;
+    height: 210px;
+    padding: 0px 16px;
+    .content__logos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -25px;
+      .logos {
+        width: 38px;
+        height: 38px;
+      }
+    }
+    .content__heading {
+      @include text(22px, '', 500);
+      margin: 10px 0;
+      color: $WHITE;
+    }
+    .content__price {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      .price__title {
+        @include text(14px, '', 500);
+        color: $DISABLE;
+      }
+      .price__number {
+        @include text(15px, '', 500);
+        color: $WHITE;
+        span {
+          @include text(12px, '', 500);
+          color: $DISABLE;
+        }
+      }
+    }
+    .content___buy {
+      outline: none;
+      border: none;
+      width: 100%;
+      background-color: $SECONDRY;
+      border-radius: 5px;
+      color: $WHITE;
+      margin-top: 15px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(38, 75, 158);
+      }
+    }
+    .content___sold {
+      outline: none;
+      border: none;
+      width: 100%;
+      color: rgba(255, 255, 255, 0.3);
+      box-shadow: none;
+      background-color: rgba(255, 255, 255, 0.12);
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  }
+} //==========================
+//         BUY CARD
+//==========================
+.buy-card {
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  overflow: hidden;
+  border: 2px solid rgb(129, 199, 132);
+  border-radius: 8px;
+  .card__img {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+  }
+  .card__content {
+    width: 100%;
+    height: 210px;
+    padding: 0px 16px;
+    .content__logos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -25px;
+      .logos {
+        width: 38px;
+        height: 38px;
+      }
+    }
+    .content__heading {
+      @include text(22px, '', 500);
+      margin: 10px 0;
+      color: $WHITE;
+    }
+    .content__price {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      .price__title {
+        @include text(14px, '', 500);
+        color: $DISABLE;
+      }
+      .price__number {
+        @include text(15px, '', 500);
+        color: $WHITE;
+        span {
+          @include text(12px, '', 500);
+          color: $DISABLE;
+        }
+      }
+    }
+    .content___buy {
+      outline: none;
+      border: none;
+      width: 100%;
+      background-color: $SECONDRY;
+      border-radius: 5px;
+      color: $WHITE;
+      margin-top: 15px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(38, 75, 158);
+      }
+    }
+  }
+} //==========================
+//         SOLD CARD
+//==========================
+.sold-card {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  .card__img {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+  }
+  .card__content {
+    width: 100%;
+    height: 150px;
+    padding: 0px 16px;
+    .content__logos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -25px;
+      .logos {
+        width: 38px;
+        height: 38px;
+      }
+    }
+    .content__heading {
+      @include text(22px, '', 500);
+      margin: 10px 0;
+      color: $WHITE;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .content___buy {
+      outline: none;
+      border: none;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: rgb(91, 24, 154);
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
+      // &:hover {
+      //   background-color: rgb(38, 75, 158);
+      // }
+      a {
+        @include text(14px, '', 500);
+        text-decoration: none;
+        color: $WHITE;
+        padding: 6px 0px;
+      }
+    }
+  }
+}
+
+//==========================
+//         OWNED CARD
+//==========================
+.owned-card {
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  overflow: hidden;
+  border: 2px solid rgb(129, 199, 132);
+  border-radius: 8px;
+  .card__img {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+  }
+  .card__content {
+    width: 100%;
+    height: 210px;
+    padding: 0px 16px;
+    .content__logos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -25px;
+      .logos {
+        width: 38px;
+        height: 38px;
+      }
+    }
+    .content__heading {
+      @include text(22px, '', 500);
+      margin: 10px 0;
+      color: $WHITE;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .content__data {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      .data__left {
+        display: flex;
+        flex-direction: column;
+        .left__title {
+          @include text(12px, '', 400);
+          color: $WHITE;
+        }
+        .left__link {
+          @include text(11px, '', 400);
+          text-decoration: none;
+          color: $SECONDRY;
+          width: 130px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-top: 5px;
+        }
+      }
+      .data__right {
+        display: flex;
+        flex-direction: column;
+        .right__title {
+          @include text(12px, '', 400);
+          color: $WHITE;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .content___details {
+      outline: none;
+      border: none;
+      width: 100%;
+      background-color: $SECONDRY;
+      border-radius: 5px;
+      color: $WHITE;
+      margin-top: 15px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(38, 75, 158);
+      }
+
+     
+    }
+  }
+  .card__actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    .actions--transfer {
+      @include text(14px, '', 500, uppercase);
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid $SECONDRY;
+      background-color: $SECONDRY;
+      color: $WHITE;
+      cursor: pointer;
+    }
+    .actions--staking {
+      @include text(14px, '', 500, uppercase);
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid $SECONDRY;
+      background-color: $SECONDRY;
+      color: $WHITE;
+      cursor: pointer;
+    }
+    .actions--sell {
+      @include text(14px, '', 500, uppercase);
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid $SECONDRY;
+      background-color: $SECONDRY;
+      color: $WHITE;
+      cursor: pointer;
+    }
+  }
+}

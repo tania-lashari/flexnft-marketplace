@@ -1,0 +1,111 @@
+.create-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  width: 624px;
+  margin: auto;
+  padding: 80px 0px;
+  .page__started-text {
+    @include text(16px, '', 400);
+    color: $SECONDRY;
+    margin-bottom: 11px;
+  }
+  .page__heading {
+    @include text(33px, '', 600);
+    color: $WHITE;
+    margin-bottom: 11px;
+  }
+  .page__form {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 30px 10px;
+    .form__file {
+    }
+    label {
+      @include text(18px, '', 500);
+      color: $WHITE;
+      margin-top: 10px;
+    }
+    input {
+      width: 100%;
+      outline: none;
+      border: none;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    select {
+      width: 100%;
+      outline: none;
+      border: none;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .page__select {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      width: 100%;
+      .select__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        label {
+          @include text(18px, '', 500);
+          color: $WHITE;
+          margin-bottom: 5px;
+        }
+        select {
+          width: 90%;
+          outline: none;
+          border: none;
+          padding: 5px;
+          border-radius: 4px;
+        }
+      }
+    }
+    .page__radio {
+      display: flex;
+      align-items: center;
+      label {
+        @include text(18px, '', 500);
+        color: $WHITE;
+        margin-bottom: 12px;
+      }
+      .radio {
+        width: auto;
+      }
+    }
+    .page--additional-token {
+      @include text(13px, '', 500);
+      box-sizing: border-box;
+      background-color: transparent;
+      cursor: pointer;
+      line-height: 1.75;
+      text-transform: uppercase;
+      padding: 8px 0px;
+      text-align: center;
+      border-radius: 8px;
+      border: 1px solid rgb(55, 226, 83);
+      color: $SECONDRY;
+      width: 100%;
+      margin-bottom: 15px;
+      &:hover {
+        background-color: rgba(55, 108, 226, 0.08);
+        border: 1px solid rgb(55, 226, 83);
+      }
+    }
+    .page--create {
+      width: 100%;
+      background-color: $SECONDRY;
+      border-radius: 8px;
+      color: $WHITE;
+      margin-top: 15px;
+      text-align: center;
+      cursor: pointer;
+      padding: 7px 0px;
+      &:hover {
+        background-color: rgb(55, 226, 83);
+      }
+    }
+  }
+}

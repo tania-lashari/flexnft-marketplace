@@ -1,0 +1,117 @@
+.page-faqs {
+  background-color: $SECONDRY;
+  .faqs__heading {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 50px 0px;
+    width: 100%;
+    @media screen and (max-width: 900px) {
+      font-size: 30px;
+      padding-bottom: 0px;
+    }
+  }
+}
+
+.faqs-sec {
+  padding: 70px 0;
+  position: relative;
+}
+.faqs-sec > .title-heading {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #213745;
+  margin-bottom: 15px;
+}
+
+.faqs-main {
+  padding-top: 25px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  @media all and (max-width: 900px) {
+    width: 100%;
+  }
+}
+.faqs-main:before {
+  position: absolute;
+  top: -50px;
+  left: -70px;
+  width: 229px;
+  height: 227px;
+
+  content: '';
+  z-index: 1;
+}
+.faqs-main:after {
+  position: absolute;
+  bottom: -70px;
+  right: -70px;
+  width: 185px;
+  height: 185px;
+
+  content: '';
+}
+.accordion {
+  position: relative;
+  z-index: 1;
+}
+.faqs-main .accordion-item {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: transparent;
+  border: none;
+}
+.faqs-main .accordion-item .accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px 18px 20px 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+  font-family: 'GilroySemiBold';
+  text-align: left;
+  background-color: $THIRD;
+  border: 0;
+  border-radius: 5px;
+  overflow-anchor: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    border-radius 0.15s ease;
+}
+.faqs-main .accordion-item .accordion-button {
+  box-shadow: none !important;
+}
+.faqs-main .accordion-item .accordion-button:not(.collapsed) {
+  color: white;
+  background-color: $THIRD;
+
+  box-shadow: none !important;
+  border-radius: 5px;
+}
+.faqs-main .accordion-item .accordion-button::after {
+  transform: rotate(-90deg);
+  background-image: url(../../assets/faq-arrow.svg);
+}
+
+.faqs-main .accordion-button:not(.collapsed)::after {
+  background-image: url(../../assets/faq-arrow.svg);
+  transform: rotate(-180deg);
+}
+.faqs-main .accordion-body {
+  padding: 20px 18px 20px 20px;
+  background-color: #df9b0b;
+}
+.faqs-main .accordion-body p {
+  font-size: 14px;
+  color: white;
+
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}

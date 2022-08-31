@@ -1,0 +1,109 @@
+//==============================
+// DESKTOP PROFILE INFO
+//==============================
+
+.desktop-profile-info {
+  position: relative;
+  width: 100%;
+  height: 290px;
+  background: #e3e3e3;
+  margin-bottom: 270px;
+  .profile__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+  }
+
+  .profile__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: inherit;
+    top: 200px;
+    left: 0;
+    right: 0;
+    max-width: 1280px;
+    padding: 0px 80px;
+    margin: auto;
+    .update__info {
+      display: flex;
+      width: 100%;
+      .missing__picture {
+        top: 80px;
+        left: 85px;
+      }
+      .picture {
+        width: 234px;
+        height: 100%;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+      .info__profile {
+        display: flex;
+        flex-direction: column;
+        padding-top: 150px;
+        padding-left: 12px;
+        .profile__username {
+          @include text(20px, '', 700);
+          line-height: 18px;
+          .user__verified {
+            margin-left: 5px;
+            margin-bottom: 5px;
+          }
+        }
+        .profile__bio {
+          @include text(15px, 0.002em, 400);
+          line-height: 18px;
+          max-width: 410px;
+          margin-top: 10px;
+          word-wrap: break-word;
+        }
+        .profile__about-heading {
+          @include text(18px, 0.002em, 700);
+          line-height: 18px;
+          max-width: 200px;
+          margin-top: 40px;
+        }
+        .profile__about-text {
+          @include text(15px, 0.002em, 400);
+          line-height: 18px;
+          max-width: 600px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+//=========================
+//    CREATORS PAGE
+//=========================
+.creators-page {
+  .page__heading {
+    @include text(32px, '', 700);
+    margin-bottom: 12px;
+  }
+  .page__tabs {
+    display: flex;
+    align-items: center;
+    .tabs__name {
+      @include text(14px, '', 500);
+      cursor: pointer;
+      line-height: 1.25;
+      text-transform: uppercase;
+      padding: 12px 16px;
+    }
+    .active {
+      color: rgb(55, 108, 226);
+      border-bottom: 1px solid rgb(55, 108, 226);
+    }
+  }
+  .page__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr)) !important;
+    grid-gap: 24px;
+    padding: 21px 0 61px;
+  }
+}
